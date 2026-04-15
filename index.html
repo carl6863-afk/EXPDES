@@ -106,6 +106,14 @@
 <button class="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm tracking-widest font-medium hover:opacity-90 transition-opacity scale-95 transition-transform duration-200">Contact</button>
 </div>
 </header>
+      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+  <div class="p-6 flex flex-col gap-6 font-['Noto_Serif'] text-lg">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonials.html">Testimonials</a>
+  </div>
+</div>
 <!-- Hero Section -->
 <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -236,7 +244,7 @@
 <!-- Testimonials/CTA -->
 <section class="py-32 px-8 bg-[#5B634A] text-white">
 <div class="max-w-4xl mx-auto text-center">
-<span class="material-symbols-outlined text-5xl opacity-30 mb-8" data-icon="format_quote"></span>
+<span id="menuBtn" class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4] cursor-pointer">menu</span>
 <blockquote class="serif text-3xl md:text-5xl leading-tight mb-12 italic">
                 Designing a house that you can call home.
             </blockquote>
