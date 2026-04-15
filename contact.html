@@ -97,9 +97,19 @@
 <a class="text-[#474948] dark:text-[#fbf9f4] border-b border-[#645e52] pb-1 hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="contact.html">Contact Us</a>
 <a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="testimonials.html">Testimonials</a>
 </nav>
-
+<button id="menuBtn" class="md:hidden p-2 active:scale-95 transition-transform duration-200">
+  <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">menu</span>
+</button>
 </div>
 </header>
+        <div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50">
+  <div class="p-8 flex flex-col gap-6 font-['Manrope'] text-sm uppercase tracking-widest">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonials.html">Testimonials</a>
+  </div>
+</div>
 <main class="pt-32 pb-20">
 <!-- Hero Section -->
 <section class="px-8 md:px-16 mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
@@ -209,4 +219,13 @@
 <a class="text-[#645e52] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="testimonials.html">Testimonials</a>
 </div>
 </footer>
-</body></html>
+        <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("translate-x-full");
+  });
+</script>
+</body>
+</html>
