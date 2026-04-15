@@ -94,7 +94,7 @@
 <header class="bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(27,28,25,0.05)]">
 <div class="flex justify-between items-center px-12 py-6 max-w-full mx-auto">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]" data-icon="menu"></span>
+<span id="menuBtn" class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4] cursor-pointer">menu</span>
 <h1 class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">EXPRESSIVE DESIGN</h1>
 </div>
 <nav class="hidden md:flex gap-8 items-center font-['Noto_Serif'] text-lg tracking-tight">
@@ -284,4 +284,14 @@
 </div>
 </div>
 </footer>
-</body></html>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("translate-x-full");
+    mobileMenu.classList.toggle("translate-x-0");
+  });
+</script>
+</body>
+</html>
