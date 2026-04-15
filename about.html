@@ -101,10 +101,18 @@
 <a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="testimonials.html">Testimonials</a>
 <a class="bg-primary text-on-primary px-6 py-2 text-xs tracking-widest uppercase hover:opacity-90 transition-opacity scale-100 active:scale-95 transition-transform" href="contact.html">Contact</a>
 </div>
-<button class="md:hidden p-2 active:scale-95 transition-transform duration-200">
+<button id="menuBtn" class="md:hidden p-2 active:scale-95 transition-transform duration-200">
 <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">menu</span>
 </button>
 </nav>
+      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50">
+  <div class="p-8 flex flex-col gap-6 font-['Manrope'] text-sm uppercase tracking-widest">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonials.html">Testimonials</a>
+  </div>
+</div>
 <main class="pt-32 pb-24 px-8 md:px-16 max-w-7xl mx-auto">
 <!-- Hero Section: Narrative -->
 <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-24">
@@ -198,4 +206,13 @@
 </a>
 </div>
 </footer>
-</body></html>
+      <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("translate-x-full");
+  });
+</script>
+</body>
+</html>
