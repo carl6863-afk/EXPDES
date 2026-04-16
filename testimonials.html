@@ -94,7 +94,11 @@
 <header class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(27,28,25,0.05)]">
 <nav class="flex justify-between items-center px-12 py-6 max-w-full">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4] md:hidden">menu</span>
+<button id="menuBtn" class="md:hidden">
+  <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">
+    menu
+  </span>
+</button>
 <div class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">
                 Expressive Design
             </div>
@@ -110,6 +114,16 @@
 </a>
 </nav>
 </header>
+      <div id="mobileMenu"
+     class="fixed top-0 left-0 w-full h-full bg-white dark:bg-[#1b1c19] z-40 transform -translate-y-full transition-transform duration-300 md:hidden">
+
+  <div class="flex flex-col items-center justify-center h-full gap-8 text-xl font-['Noto_Serif']">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="testimonials.html">Testimonials</a>
+  </div>
+</div>
 <main class="pt-32 pb-24 px-8 md:px-16">
 <!-- Hero Section -->
 <section class="max-w-screen-xl mx-auto mb-20 text-center">
@@ -216,4 +230,22 @@ She paid close attention to my budget, while still offering high quality items .
             </div>
 </div>
 </footer>
+      <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  let menuOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    menuOpen = !menuOpen;
+
+    if (menuOpen) {
+      mobileMenu.classList.remove("-translate-y-full");
+      mobileMenu.classList.add("translate-y-0");
+    } else {
+      mobileMenu.classList.add("-translate-y-full");
+      mobileMenu.classList.remove("translate-y-0");
+    }
+  });
+</script>
 </body></html>
