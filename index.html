@@ -108,7 +108,8 @@
 </a>
 </div>
 </header>
-      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+      <div id="mobileMenu" 
+            class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
   <div style="display:flex; justify-content:flex-end; padding:20px;">
   <button id="closeMenuBtn">
     <span class="material-symbols-outlined">close</span>
@@ -292,18 +293,22 @@
 </div>
 </footer>
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("translate-x-full");
-    mobileMenu.classList.toggle("translate-x-0");
-  });
-</script>
-      <script>
-document.getElementById("closeMenuBtn").addEventListener("click", () => {
-  document.getElementById("mobileMenu").classList.add("translate-x-full");
-});
+function openMenu() {
+  mobileMenu.classList.remove("translate-x-full");
+  mobileMenu.classList.add("translate-x-0");
+}
+
+function closeMenu() {
+  mobileMenu.classList.add("translate-x-full");
+  mobileMenu.classList.remove("translate-x-0");
+}
+
+menuBtn.addEventListener("click", openMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 </script>
 </body>
 </html>
